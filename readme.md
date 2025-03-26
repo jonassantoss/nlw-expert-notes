@@ -2,7 +2,7 @@
 
 Este é um projeto desenvolvido durante o bootcamp NLW-Expert da Rocketseat na trilha react. O projeto consiste em uma aplicação web para criação, edição, exclusão e busca de notas. O aplicativo permite aos usuários escrever suas notas tanto por texto como por fala, onde a fala é transcrita automaticamente para texto.
 
-Para o utilizar, clique no link a seguir:
+Para o utilizar, clique no link a seguir: https://nlw-expert-notes-liard.vercel.app/
 
 ## Tecnologias Utilizadas
 
