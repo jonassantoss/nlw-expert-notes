@@ -14,6 +14,14 @@
 
 Este projeto foi desenvolvido durante o bootcamp NLW-Expert (trilha React) da Rocketseat e expandido com novas funcionalidades como organização em pastas e movimentação de notas. Ele permite criar notas via texto ou voz (usando a Web Speech API) e organizá-las de maneira simples e rápida.
 
+## 🖼 Preview
+
+<div align="center">
+	<img src="./.github/preview.png" alt="Preview da aplicação" />
+	<br />
+	<em>Tela exibindo busca, criação de pasta e card para adicionar nota.</em>
+</div>
+
 ## Tecnologias Utilizadas
 
 - TypeScript
