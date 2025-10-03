@@ -1,14 +1,9 @@
-<div align="center">
-	<img src="./src/assets/logo-nlw-expert.svg" alt="Expert Notes" height="64" />
-
-	# NLW Expert Notes
-
-	Aplicação web para criação, organização e busca de notas com suporte a transcrição de áudio em tempo real.
-	<br />
-	<a href="https://nlw-expert-notes-liard.vercel.app/" target="_blank"><strong>🔗 Acesse a aplicação</strong></a>
-</div>
-
 ---
+<img src="./src/assets/logo-nlw-expert.svg" alt="Expert Notes" height="64" />
+
+Aplicação web para criação, organização e busca de notas com suporte a transcrição de áudio em tempo real.
+	<br />
+	<a href="https://nlw-expert-notes-ntdz1bx1a-expresscoffes-projects.vercel.app/" target="_blank"><strong>🔗 Acesse a aplicação</strong></a>
 
 ## 📌 Sobre o Projeto
 
@@ -152,3 +147,4 @@ Se você tiver alguma dúvida ou sugestão, entre em contato:
 <div align="center">
 	Feito com 💚 durante o NLW Expert e expandido com novas ideias.
 </div>
+
