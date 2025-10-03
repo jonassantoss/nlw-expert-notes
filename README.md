@@ -110,13 +110,13 @@ src/
 
 ## ⚠️ Limitações / Próximos Passos
 
-| Item                 | Status    | Observação                            |
-|----------------------|-----------|---------------------------------------|
-| Edição de nota       | Em aberto | Ainda não implementado inline/modal   |
-| Tags/Categorias      | Ideia     | Poderiam complementar pastas          |
-| Sincronização cloud  | Ideia     | Ex: IndexedDB + backend / Supabase    |
-| Testes automatizados | Em aberto | Poderiam ser adicionados (Vitest/RTL) |
-| Dark/Light toggle    | Futuro    | Hoje apenas tema escuro               |
+| Item                 | Status    |
+|----------------------|-----------|
+| Edição de nota       | Em aberto |
+| Tags/Categorias      | Ideia     |
+| Sincronização cloud  | Ideia     |
+| Testes automatizados | Em aberto |
+| Dark/Light toggle    | Futuro    |
 
 ## 🤝 Como Contribuir
 
@@ -147,4 +147,5 @@ Se você tiver alguma dúvida ou sugestão, entre em contato:
 <div align="center">
 	Feito com 💚 durante o NLW Expert e expandido com novas ideias.
 </div>
+
 
