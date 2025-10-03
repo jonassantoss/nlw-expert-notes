@@ -1,8 +1,8 @@
 <div align="center">
 	<img src="./src/assets/logo-nlw-expert.svg" alt="Expert Notes" height="64" />
-  
+
 	# NLW Expert Notes
-  
+
 	Aplicação web para criação, organização e busca de notas com suporte a transcrição de áudio em tempo real.
 	<br />
 	<a href="https://nlw-expert-notes-liard.vercel.app/" target="_blank"><strong>🔗 Acesse a aplicação</strong></a>
@@ -69,11 +69,11 @@ Servidor local (Vite) abrirá em algo como: `http://localhost:5173` (ou outra po
 
 ### Scripts Disponíveis
 
-| Script            | Descrição                                      |
-|-------------------|------------------------------------------------|
-| `npm run dev`     | Inicia o ambiente de desenvolvimento (Vite)    |
-| `npm run build`   | Gera build de produção                         |
-| `npm run preview` | Serve a versão build para inspeção local       |
+| Script            | Descrição                                   |
+|-------------------|---------------------------------------------|
+| `npm run dev`     | Inicia o ambiente de desenvolvimento (Vite) |
+| `npm run build`   | Gera build de produção                      |
+| `npm run preview` | Serve a versão build para inspeção local    |
 
 ## 🧱 Arquitetura Simplificada
 
@@ -115,13 +115,13 @@ src/
 
 ## ⚠️ Limitações / Próximos Passos
 
-| Item | Status | Observação |
-|------|--------|------------|
-| Edição de nota | Em aberto | Ainda não implementado inline/modal |
-| Tags/Categorias | Ideia | Poderiam complementar pastas |
-| Sincronização cloud | Ideia | Ex: IndexedDB + backend / Supabase |
+| Item                 | Status    | Observação                            |
+|----------------------|-----------|---------------------------------------|
+| Edição de nota       | Em aberto | Ainda não implementado inline/modal   |
+| Tags/Categorias      | Ideia     | Poderiam complementar pastas          |
+| Sincronização cloud  | Ideia     | Ex: IndexedDB + backend / Supabase    |
 | Testes automatizados | Em aberto | Poderiam ser adicionados (Vitest/RTL) |
-| Dark/Light toggle | Futuro | Hoje apenas tema escuro |
+| Dark/Light toggle    | Futuro    | Hoje apenas tema escuro               |
 
 ## 🤝 Como Contribuir
 
