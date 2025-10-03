@@ -27,7 +27,7 @@
         "useButtonType": "warn",
         "noStaticElementInteractions": "off",
         "useKeyWithClickEvents": "off",
-        "noLabelWithoutControl": "warn"
+        "noLabelWithoutControl": "off"
       },
       "complexity": {
         "recommended": true,

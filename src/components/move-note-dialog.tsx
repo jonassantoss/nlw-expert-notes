@@ -63,6 +63,7 @@ export function MoveNoteDialog({
 
 						<div className="flex-1 overflow-y-auto space-y-2">
 							<button
+								type="button"
 								onClick={() => setSelectedFolderId(null)}
 								className={`w-full text-left p-3 rounded-md transition-colors ${
 									selectedFolderId === null
@@ -76,6 +77,7 @@ export function MoveNoteDialog({
 							{folders.map((folder) => (
 								<button
 									key={folder.id}
+									type="button"
 									onClick={() => setSelectedFolderId(folder.id)}
 									className={`w-full text-left p-3 rounded-md transition-colors ${
 										selectedFolderId === folder.id

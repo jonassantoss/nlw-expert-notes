@@ -137,63 +137,64 @@ export function App() {
 
 	function onMoveNote(noteId: string, targetFolderId: string | null) {
 		// Encontra a nota atual
-		let noteToMove: Note | undefined;
-		let sourceFolderId: string | null = null;
+		const findNoteAndSource = () => {
+			const noteInList = notes.find((n) => n.id === noteId);
+			if (noteInList) {
+				return { note: noteInList, sourceFolderId: null };
+			}
 
-		// Procura nas notas sem pasta
-		noteToMove = notes.find((n) => n.id === noteId);
-
-		// Se não encontrou, procura nas pastas
-		if (!noteToMove) {
 			for (const folder of folders) {
 				const foundNote = folder.notes.find((n) => n.id === noteId);
 				if (foundNote) {
-					noteToMove = foundNote;
-					sourceFolderId = folder.id;
-					break;
+					return { note: foundNote, sourceFolderId: folder.id };
 				}
 			}
-		}
 
+			return { note: undefined, sourceFolderId: null };
+		};
+
+		const { note: noteToMove, sourceFolderId } = findNoteAndSource();
 		if (!noteToMove) return;
 
 		// Remove da origem
-		if (sourceFolderId) {
-			const updatedFolders = folders.map((folder) => {
-				if (folder.id === sourceFolderId) {
-					return {
-						...folder,
-						notes: folder.notes.filter((note) => note.id !== noteId),
-					};
-				}
-				return folder;
-			});
-			setFolders(updatedFolders);
-			localStorage.setItem("folders", JSON.stringify(updatedFolders));
-		} else {
-			const updatedNotes = notes.filter((note) => note.id !== noteId);
-			setNotes(updatedNotes);
-			localStorage.setItem("notes", JSON.stringify(updatedNotes));
-		}
+		const removeFromSource = () => {
+			if (sourceFolderId) {
+				const updatedFolders = folders.map((folder) =>
+					folder.id === sourceFolderId
+						? { ...folder, notes: folder.notes.filter((note) => note.id !== noteId) }
+						: folder
+				);
+				setFolders(updatedFolders);
+				localStorage.setItem("folders", JSON.stringify(updatedFolders));
+			} else {
+				const updatedNotes = notes.filter((note) => note.id !== noteId);
+				setNotes(updatedNotes);
+				localStorage.setItem("notes", JSON.stringify(updatedNotes));
+			}
+		};
 
 		// Adiciona ao destino
-		if (targetFolderId) {
-			const updatedFolders = folders.map((folder) => {
-				if (folder.id === targetFolderId) {
-					return {
-						...folder,
-						notes: [{ ...noteToMove!, folderId: targetFolderId }, ...folder.notes],
-					};
-				}
-				return folder;
-			});
-			setFolders(updatedFolders);
-			localStorage.setItem("folders", JSON.stringify(updatedFolders));
-		} else {
-			const updatedNotes = [{ ...noteToMove, folderId: null }, ...notes];
-			setNotes(updatedNotes);
-			localStorage.setItem("notes", JSON.stringify(updatedNotes));
-		}
+		const addToTarget = () => {
+			if (targetFolderId) {
+				const updatedFolders = folders.map((folder) =>
+					folder.id === targetFolderId
+						? {
+								...folder,
+								notes: [{ ...noteToMove, folderId: targetFolderId }, ...folder.notes],
+							}
+						: folder
+				);
+				setFolders(updatedFolders);
+				localStorage.setItem("folders", JSON.stringify(updatedFolders));
+			} else {
+				const updatedNotes = [{ ...noteToMove, folderId: null }, ...notes];
+				setNotes(updatedNotes);
+				localStorage.setItem("notes", JSON.stringify(updatedNotes));
+			}
+		};
+
+		removeFromSource();
+		addToTarget();
 	}
 
 	function handleClearAllNotes() {
